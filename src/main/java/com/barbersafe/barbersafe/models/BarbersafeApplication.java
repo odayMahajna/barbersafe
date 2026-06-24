@@ -1,4 +1,4 @@
-package com.barbersafe.barbersafe;
+package com.barbersafe.barbersafe.models;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
