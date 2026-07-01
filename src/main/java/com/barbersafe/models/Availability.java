@@ -1,4 +1,4 @@
-package com.barbersafe.barbersafe.models;
+package com.barbersafe.models;
 
 import jakarta.persistence.*;
 import java.time.LocalTime;

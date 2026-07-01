@@ -1,4 +1,4 @@
-package com.barbersafe.barbersafe.models;
+package com.barbersafe.models;
 
 import java.time.Instant;
 import java.util.UUID;
