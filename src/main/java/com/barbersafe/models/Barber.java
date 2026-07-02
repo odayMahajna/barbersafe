@@ -43,7 +43,7 @@ public class Barber {
      private Integer defaultDurationMinutes = 60;
 
      @Column(name = "price")
-     private Integer price;
+     private Double price;
 
      @Column(name = "is_active", nullable = false)
      private Boolean isActive = true;
@@ -146,11 +146,11 @@ public class Barber {
           this.defaultDurationMinutes = defaultDurationMinutes;
      }
 
-     public Integer getPrice() {
+     public Double getPrice() {
           return price;
      }
 
-     public void setPrice(Integer price) {
+     public void setPrice(Double price) {
           this.price = price;
      }
 

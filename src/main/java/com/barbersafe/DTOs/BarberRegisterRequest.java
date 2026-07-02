@@ -56,4 +56,9 @@ public class BarberRegisterRequest {
      public void setPrice(Double price) {
           this.price = price;
      }
+
+     public String getPhone() {
+          // TODO Auto-generated method stub
+          throw new UnsupportedOperationException("Unimplemented method 'getPhone'");
+     }
 }
