@@ -1,5 +1,36 @@
 package com.barbersafe.DTOs;
 
 public class BarberUpdateRequest {
-     // I don't know what to include here
+
+     private String fullName;
+     private String businessName;
+     private Integer defaultDurationMinutes;
+     private Double price;
+     
+     public String getFullName() {
+          return fullName;
+     }
+     public void setFullName(String fullName) {
+          this.fullName = fullName;
+     }
+     public String getBusinessName() {
+          return businessName;
+     }
+     public void setBusinessName(String businessName) {
+          this.businessName = businessName;
+     }
+     public Integer getDefaultDurationMinutes() {
+          return defaultDurationMinutes;
+     }
+     public void setDefaultDurationMinutes(Integer defaultDurationMinutes) {
+          this.defaultDurationMinutes = defaultDurationMinutes;
+     }
+     public Double getPrice() {
+          return price;
+     }
+     public void setPrice(Double price) {
+          this.price = price;
+     }
+
+     
 }

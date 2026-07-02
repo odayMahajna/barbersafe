@@ -1,11 +1,22 @@
 package com.barbersafe.DTOs;
 
+import java.util.UUID;
+
 public class BarberPublicProfileResponse {
      
+     private UUID id;
      private String fullName;
      private String businessName;
      private Integer defaultDurationMinutes;
      private Double price;
+
+     public UUID getId() {
+          return id;
+     }
+
+     public void setId(UUID id) {
+          this.id = id;
+     }
 
      public String getFullName() {
           return fullName;
