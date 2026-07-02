@@ -1,6 +1,7 @@
 package com.barbersafe.Services;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 
 import com.barbersafe.DTOs.BarberLoginRequest;
 import com.barbersafe.DTOs.BarberRegisterRequest;
@@ -8,6 +9,7 @@ import com.barbersafe.DTOs.BarberResponse;
 import com.barbersafe.Repositories.BarberRepo;
 import com.barbersafe.models.Barber;
 
+@Service
 public class BarberService {
      
      private final BarberRepo barberRepository;

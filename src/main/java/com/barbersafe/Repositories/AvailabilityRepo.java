@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.barbersafe.models.Availability;
 
-public interface AvailabilityRepository extends JpaRepository<Availability, UUID> {
+public interface AvailabilityRepo extends JpaRepository<Availability, UUID> {
 
      List<Availability> findByBarberIdAndDayOfWeek(UUID barberId, Short dayOfWeek);
 
