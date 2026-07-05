@@ -7,7 +7,7 @@ public class CreateTimeOffRequest {
      private Instant endsAt;
      private String reason;
 
-     public Instant getStartTime() {
+     public Instant getStartAt() {
           return startsAt;
      }
      public void setStartsAt(Instant startsAt) {

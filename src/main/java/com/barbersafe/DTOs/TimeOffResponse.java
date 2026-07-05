@@ -15,16 +15,16 @@ public class TimeOffResponse {
      public void setId(UUID id) {
           this.id = id;
      }
-     public Instant getStartTime() {
+     public Instant getStartsAt() {
           return startsAt;
      }
-     public void setStartTime(Instant startsAt) {
+     public void setStartsAt(Instant startsAt) {
           this.startsAt = startsAt;
      }
-     public Instant getEndTime() {
+     public Instant getEndsAt() {
           return endsAt;
      }
-     public void setEndTime(Instant endsAt) {
+     public void setEndsAt(Instant endsAt) {
           this.endsAt = endsAt;
      }
      public String getReason() {

@@ -20,11 +20,11 @@ import jakarta.persistence.Table;
 public class Booking {
      // the only allowed status.
      public enum BookingStatus {
-          pending,
-          confirmed,
-          cancelled,
-          completed,
-          no_show
+          PENDING,
+          CONFIRMED,
+          CANCELLED,
+          COMPLETED,
+          NO_SHOW
      }
 
      @Id
@@ -53,7 +53,7 @@ public class Booking {
 
      @Enumerated(EnumType.STRING)
      @Column(name = "status", nullable = false)
-     private BookingStatus status = BookingStatus.pending;
+     private BookingStatus status = BookingStatus.PENDING;
 
      @Column(name = "notes")
      private String notes;
@@ -63,5 +63,95 @@ public class Booking {
 
      @Column(name = "updated_at", nullable = false)
      private Instant updatedAt;
+
+     public UUID getId() {
+          return id;
+     }
+
+     public void setId(UUID id) {
+          this.id = id;
+     }
+
+     public Barber getBarber() {
+          return barber;
+     }
+
+     public void setBarber(Barber barber) {
+          this.barber = barber;
+     }
+
+     public String getGuestName() {
+          return guestName;
+     }
+
+     public void setGuestName(String guestName) {
+          this.guestName = guestName;
+     }
+
+     public String getGuestPhone() {
+          return guestPhone;
+     }
+
+     public void setGuestPhone(String guestPhone) {
+          this.guestPhone = guestPhone;
+     }
+
+     public String getGuestEmail() {
+          return guestEmail;
+     }
+
+     public void setGuestEmail(String guestEmail) {
+          this.guestEmail = guestEmail;
+     }
+
+     public Instant getStartsAt() {
+          return startsAt;
+     }
+
+     public void setStartsAt(Instant startsAt) {
+          this.startsAt = startsAt;
+     }
+
+     public Instant getEndsAt() {
+          return endsAt;
+     }
+
+     public void setEndsAt(Instant endsAt) {
+          this.endsAt = endsAt;
+     }
+
+     public BookingStatus getStatus() {
+          return status;
+     }
+
+     public void setStatus(BookingStatus status) {
+          this.status = status;
+     }
+
+     public String getNotes() {
+          return notes;
+     }
+
+     public void setNotes(String notes) {
+          this.notes = notes;
+     }
+
+     public Instant getCreatedAt() {
+          return createdAt;
+     }
+
+     public void setCreatedAt(Instant createdAt) {
+          this.createdAt = createdAt;
+     }
+
+     public Instant getUpdatedAt() {
+          return updatedAt;
+     }
+
+     public void setUpdatedAt(Instant updatedAt) {
+          this.updatedAt = updatedAt;
+     }
+
+     
 
 }

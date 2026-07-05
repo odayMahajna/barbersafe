@@ -12,8 +12,7 @@ import com.barbersafe.models.Booking;
 public interface BookingRepo extends JpaRepository<Booking, UUID> {
 
      //returns all bookings in time range.
-     List<Booking> findByBarberIdWithTime(UUID barberId, Instant startTime, Instant endTime);
-
+     List<Booking> findByBarberIdAndStartsAtBetween(UUID barberId, Instant startTime, Instant endTime);
 
      // returns all booking that overlap.
      @Query(value = """
