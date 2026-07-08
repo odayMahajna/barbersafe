@@ -8,6 +8,7 @@ public class BarberRegisterRequest {
      private String password;
      private Integer defaultDurationMinutes;
      private Double price;
+     private String phone;
 
      public String getFullName() {
           return fullName;
@@ -58,7 +59,10 @@ public class BarberRegisterRequest {
      }
 
      public String getPhone() {
-          // TODO Auto-generated method stub
-          throw new UnsupportedOperationException("Unimplemented method 'getPhone'");
+          return this.phone;
+     }
+
+     public void setPhone(String phone){
+          this.phone = phone;
      }
 }

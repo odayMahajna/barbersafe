@@ -28,6 +28,10 @@ public class BarberService {
                throw new IllegalArgumentException("Email already in use");
           }
 
+          if (barberRequest.getPhone() == null || barberRequest.getPhone().isBlank()) {
+               throw new IllegalArgumentException("Phone number is required!");
+          }
+
           Barber barber = new Barber();
           barber.setFullname(barberRequest.getFullName());
           barber.setEmail(barberRequest.getEmail());
@@ -36,7 +40,7 @@ public class BarberService {
           barber.setBuisnessName(barberRequest.getBusinessName());
           barber.setDefaultDurationMinutes(barberRequest.getDefaultDurationMinutes());
           barber.setPrice(barberRequest.getPrice());
-
+          
           Barber savedBarber = barberRepo.save(barber);
 
           return toResponse(savedBarber);
@@ -57,12 +61,14 @@ public class BarberService {
      }
 
 
-     public void deactivate(UUID barberId) {
+     public BarberResponse toggleActive(UUID barberId) {
           Barber barber = barberRepo.findById(barberId).orElseThrow(
                     () -> new IllegalArgumentException("Barber not found"));
 
-          barber.setIsActive(false);
+          barber.setIsActive(!barber.getIsActive());
           barberRepo.save(barber);
+
+          return toResponse(barber);
      }
      
 
