@@ -1,12 +1,12 @@
 services:
   postgres:
     image: postgres:15
-    container_name: barbersafe-DB
+    container_name: THE_CONTAINER_NAME
     restart: unless-stopped
     environment:
-      POSTGRES_USER: developer
-      POSTGRES_PASSWORD: developer
-      POSTGRES_DB: barbersafe
+      POSTGRES_USER: USER_NAME
+      POSTGRES_PASSWORD: PASSWORD
+      POSTGRES_DB: DATABASE_NAME
     ports:
       - "5432:5432"
     volumes:
